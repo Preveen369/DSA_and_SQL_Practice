@@ -1,29 +1,27 @@
 package arrays;
 
-import java.util.Arrays;
-
 public class SecondLargestElementInArray {
-    // public static int findSecondLargestElement(int[] nums){
+    // public static int secondLargestElement(int[] nums){
     // //Bruteforce Approach:
     // Arrays.sort(nums); //O(NlogN)
     // int n = nums.length;
     // int largest = nums[n-1];
-    // int second = -1;
+    // int sLargest = -1;
 
     // for (int i=n-2; i>=0; i--){ //O(N)
     // if (nums[i] != largest){
-    // second = nums[i];
+    // sLargest = nums[i];
     // break;
     // }
     // }
-    // return second;
+    // return sLargest;
     // }
 
-    // public static int findSecondLargestElement(int[] nums){
+    // public static int secondLargestElement(int[] nums){
     // //Better Approach:
     // int n = nums.length;
     // int largest = nums[0];
-    // int second = -1;
+    // int secondLargest = -1;
 
     // for (int i=0; i<n; i++){
     // if (nums[i] > largest){
@@ -32,34 +30,35 @@ public class SecondLargestElementInArray {
     // }
 
     // for(int j=0; j<n; j++){
-    // if(nums[j] > second && nums[j] != largest){
-    // second = nums[j];
+    // if(nums[j] > secondLargest && nums[j] != largest){
+    // secondLargest = nums[j];
     // }
     // }
-    // return second;
+    // return secondLargest;
     // }
 
-    public static int findSecondLargestElement(int[] nums){
+    public static int secondLargestElement(int[] nums){
         //Optimal Approach:
         int n = nums.length;
         int largest = 1;
-        int second = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
 
         for(int i=0; i<n; i++){
             if(nums[i] > largest){
-                second = largest;
+                secondLargest = largest;
                 largest = nums[i];  
-            } else if (nums[i] < largest && nums[i] > second){
-                second = nums[i];
+            } else if (nums[i] < largest && nums[i] > secondLargest){
+                secondLargest = nums[i];
             }
         }
         
-        if (second == Integer.MIN_VALUE) return -1;
-        else return second;
+        // if second largest doesn't exists
+        if (secondLargest == Integer.MIN_VALUE) return -1;
+        else return secondLargest; // if exists
     }
 
     public static void main(String[] args) {
         int[] nums = { 1, 2, 4, 7, 7, 5 };
-        System.out.println(findSecondLargestElement(nums));
+        System.out.println(secondLargestElement(nums));
     }
 }
