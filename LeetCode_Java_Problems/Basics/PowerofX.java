@@ -1,3 +1,4 @@
+package basics;
 public class PowerofX {
     public double myPow(double x, int n) {
         if(n < 0){

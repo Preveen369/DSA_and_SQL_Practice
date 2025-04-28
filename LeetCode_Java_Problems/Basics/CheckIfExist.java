@@ -1,3 +1,5 @@
+package basics;
+
 import java.util.HashSet;
 
 public class CheckIfExist {

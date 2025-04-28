@@ -1,3 +1,4 @@
+package basics;
 public class ReverseInteger {
     public int reverse(int x) {
         int num = Math.abs(x);  // to return magnitude of x

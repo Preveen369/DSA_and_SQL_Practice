@@ -1,3 +1,4 @@
+package basics;
 public class SubstringMatchingPattern{
     public static boolean isMatchingPattern(String s, String p){
         int startIndex = p.indexOf('*');

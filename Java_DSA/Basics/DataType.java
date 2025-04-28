@@ -1,3 +1,4 @@
+package basics;
 public class DataType{
     static int dataTypeSize(String str) {
         if (str.equalsIgnoreCase("Character")) 

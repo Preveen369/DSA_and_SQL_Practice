@@ -1,3 +1,4 @@
+package basics;
 public class CountNumberOfMatchesInTouranament {
     public static int numberOfMatches(int n) {
         int matches = 0;

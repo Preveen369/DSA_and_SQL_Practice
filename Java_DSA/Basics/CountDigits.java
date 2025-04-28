@@ -1,3 +1,4 @@
+package basics;
 public class CountDigits {
     // static int evenlyDivides(int n) {
     //     int count = 0;

@@ -1,3 +1,4 @@
+package basics;
 public class DecisionMaking {
     public static String compareNM(int n, int m) {
         if (n<m) return "lesser";

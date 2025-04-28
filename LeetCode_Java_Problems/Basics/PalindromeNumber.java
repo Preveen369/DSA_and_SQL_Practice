@@ -1,3 +1,4 @@
+package basics;
 public class PalindromeNumber {
     public boolean isPalindrome(int x) {
         int orignum = x, revnum = 0;

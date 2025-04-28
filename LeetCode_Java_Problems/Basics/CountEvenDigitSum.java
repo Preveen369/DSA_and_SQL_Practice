@@ -1,3 +1,4 @@
+package basics;
 public class CountEvenDigitSum {
     public int countEven(int num) {
         int sum = 0, parity = 0;
